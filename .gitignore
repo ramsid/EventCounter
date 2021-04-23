@@ -1,0 +1,17 @@
+**/.settings
+**/.project
+**/.classpath
+**/.clover
+**/bin
+**/target
+**/.DS_store
+**/.vagrant
+**/.cache
+.settings
+.project
+.classpath
+.idea
+*.iml
+target/
+**/timers
+*.dot
