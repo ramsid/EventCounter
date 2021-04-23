@@ -1,8 +1,11 @@
 package com.instrumental.Enum;
 
+/**
+ * Frequency of duration supported.
+ */
 public enum Frequency {
 
-	SECONDS("seconds"), MINUTES("MINUTES"),INVALIDFREQUENCY("INVALIDFREQUENCY");
+	SECONDS("seconds"), MINUTES("MINUTES"), INVALIDFREQUENCY("INVALIDFREQUENCY");
 
 	private String frequency;
 

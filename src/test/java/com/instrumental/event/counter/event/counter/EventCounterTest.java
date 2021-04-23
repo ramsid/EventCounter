@@ -1,4 +1,4 @@
-package com.instrumental.event.counter.event_count;
+package com.instrumental.event.counter.event.counter;
 
 import static org.junit.Assert.assertTrue;
 
@@ -7,8 +7,8 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 
 import com.instrumental.Enum.Frequency;
-import com.instrumental.even.counter.impl.EventCounterImpl;
 import com.instrumental.event.counter.EventCounter;
+import com.instrumental.event.counter.impl.EventCounterImpl;
 
 /**
  * Unit test for {@ EventCounterImpl}.
@@ -27,6 +27,7 @@ public class EventCounterTest {
 		for (int i = 0; i < 30; i++) {
 			eventCount.hitEvent();
 		}
+		System.out.println(eventCount.getEventCount(Frequency.SECONDS, 1));
 		assertTrue(30 == eventCount.getEventCount(Frequency.SECONDS, 1));
 
 	}
@@ -84,13 +85,15 @@ public class EventCounterTest {
 		EventCounter eventCount = new EventCounterImpl();
 		int count = 0;
 		while (count < 8) {
-			TimeUnit.MINUTES.sleep(1);
+
 			for (int i = 0; i < 30; i++) {
 				eventCount.hitEvent();
 			}
+			if (count != 7)
+				TimeUnit.MINUTES.sleep(1);
+
 			count++;
 		}
-
 		assertTrue(150 == eventCount.getEventCount(Frequency.MINUTES, 8));
 	}
 
