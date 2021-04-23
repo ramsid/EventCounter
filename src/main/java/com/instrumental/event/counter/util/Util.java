@@ -4,7 +4,7 @@ import com.instrumental.Enum.Frequency;
 
 public class Util {
 
-	public static int calulateDuration(Frequency frequency, int time) {
+	public static int calulateDuration(Frequency frequency) {
 		int interval = 1;
 		if (frequency == null)
 			frequency = Frequency.INVALIDFREQUENCY;
@@ -20,5 +20,4 @@ public class Util {
 		}
 
 	}
-
 }

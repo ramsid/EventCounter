@@ -18,11 +18,12 @@ public interface EventCounter {
 	 * 
 	 * Returns the event count for user specified {@link Frequency} and time.
 	 * 
-	 * Note: Supports currently for a maximum of last 5 minutes period.If the supplied
-	 * time is greater than 5 minutes, event counter returns the event count for last
-	 * 5 minutes.
+	 * Note: Supports currently for a maximum of last 5 minutes period.If the
+	 * supplied time is greater than 5 minutes, event counter returns the event
+	 * count for last 5 minutes.
 	 *
-	 *@throws {@link IllegalArgumentException} if invalid {@link Frequency} is passed
+	 * @throws {@link IllegalArgumentException} if invalid {@link Frequency} is
+	 *         passed
 	 */
 	public Long getEventCount(Frequency frequency, int time);
 
